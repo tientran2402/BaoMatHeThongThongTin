@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>624</width>
+    <height>299</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Mã Hóa RSA</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 170, 127);</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>391</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Private key</string>
+    </property>
+    <widget class="QTextBrowser" name="tB_PrivateKey">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>391</width>
+       <height>61</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>150</y>
+      <width>391</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Public key</string>
+    </property>
+    <widget class="QTextBrowser" name="tB_PublicKey">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>391</width>
+       <height>61</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>50</y>
+      <width>121</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Chức năng</string>
+    </property>
+    <widget class="QPushButton" name="pB_CreateKey">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 170, 127);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Tạo khóa</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_LuuFile">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 170, 127);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Lưu khóa</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_Encrypt">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 170, 127);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Mã hóa</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_Decrypt">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 170, 127);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Giải mã</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>624</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuM_H_a">
+    <property name="title">
+     <string>Mã Hóa</string>
+    </property>
+    <widget class="QMenu" name="menuRSA">
+     <property name="title">
+      <string>RSA</string>
+     </property>
+     <addaction name="ac_MH_TaoKhoa"/>
+     <addaction name="separator"/>
+     <addaction name="ac_MH_RSA_2"/>
+    </widget>
+    <addaction name="ac_MH_SDES"/>
+    <addaction name="separator"/>
+    <addaction name="ac_MH_Belasco"/>
+    <addaction name="separator"/>
+    <addaction name="ac_MH_ChuyenVi"/>
+    <addaction name="separator"/>
+    <addaction name="ac_MH_Vigenere"/>
+    <addaction name="separator"/>
+    <addaction name="menuRSA"/>
+   </widget>
+   <widget class="QMenu" name="menuGi_i_M">
+    <property name="title">
+     <string>Giải Mã</string>
+    </property>
+    <widget class="QMenu" name="menuRSA_2">
+     <property name="title">
+      <string>RSA</string>
+     </property>
+     <addaction name="ac_GM_TaoKhoa"/>
+     <addaction name="separator"/>
+     <addaction name="ac_GM_RSA_2"/>
+    </widget>
+    <addaction name="ac_GM_SDES"/>
+    <addaction name="separator"/>
+    <addaction name="ac_GM_Belasco"/>
+    <addaction name="separator"/>
+    <addaction name="ac_GM_ChuyenVi"/>
+    <addaction name="separator"/>
+    <addaction name="ac_GM_Vigenre"/>
+    <addaction name="separator"/>
+    <addaction name="menuRSA_2"/>
+   </widget>
+   <addaction name="menuM_H_a"/>
+   <addaction name="menuGi_i_M"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="ac_MH_RSA">
+   <property name="text">
+    <string>RSA</string>
+   </property>
+  </action>
+  <action name="ac_MH_SDES">
+   <property name="text">
+    <string>SDES</string>
+   </property>
+  </action>
+  <action name="ac_MH_Belasco">
+   <property name="text">
+    <string>Belasco</string>
+   </property>
+  </action>
+  <action name="ac_MH_ChuyenVi">
+   <property name="text">
+    <string>Chuyển vị</string>
+   </property>
+  </action>
+  <action name="ac_GM_RSA">
+   <property name="text">
+    <string>RSA</string>
+   </property>
+  </action>
+  <action name="ac_GM_SDES">
+   <property name="text">
+    <string>SDES</string>
+   </property>
+  </action>
+  <action name="ac_GM_Belasco">
+   <property name="text">
+    <string>Belasco</string>
+   </property>
+  </action>
+  <action name="ac_GM_ChuyenVi">
+   <property name="text">
+    <string>Chuyển vị</string>
+   </property>
+  </action>
+  <action name="ac_MH_Vigenere">
+   <property name="text">
+    <string>Vigenere</string>
+   </property>
+  </action>
+  <action name="ac_GM_Vigenre">
+   <property name="text">
+    <string>Vigenere</string>
+   </property>
+  </action>
+  <action name="ac_MH_TaoKhoa">
+   <property name="text">
+    <string>Tạo khóa</string>
+   </property>
+  </action>
+  <action name="ac_MH_RSA_2">
+   <property name="text">
+    <string>Mã hóa</string>
+   </property>
+  </action>
+  <action name="ac_GM_TaoKhoa">
+   <property name="text">
+    <string>Tạo Khóa</string>
+   </property>
+  </action>
+  <action name="ac_GM_RSA_2">
+   <property name="text">
+    <string>Giải Mã</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>525</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Mã Hóa RSA</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 170, 127);</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>761</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 170, 255);</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>File văn bản</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>19</y>
+       <width>411</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="lE_FileIn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pB_ChooseFileIn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Chọn file</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>60</y>
+       <width>248</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLineEdit" name="lE_FileKey">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pB_ChooseFileKey">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Chọn file</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>File khóa</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_Encrypt">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>110</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 170, 127);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Mã hóa</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_Refresh">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>110</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 170, 127);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Làm mới</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pB_FileOut">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>120</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 127);</string>
+     </property>
+     <property name="text">
+      <string>Lưu file mới</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lE_FileOut">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>120</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Nhập tên file...</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>761</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Nội dung</string>
+    </property>
+    <widget class="QTextBrowser" name="tB_Content">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>741</width>
+       <height>261</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuM_H_a">
+    <property name="title">
+     <string>Mã Hóa</string>
+    </property>
+    <widget class="QMenu" name="menuRSA">
+     <property name="title">
+      <string>RSA</string>
+     </property>
+     <addaction name="ac_MH_TaoKhoa"/>
+     <addaction name="separator"/>
+     <addaction name="ac_MH_RSA_2"/>
+    </widget>
+    <addaction name="ac_MH_SDES"/>
+    <addaction name="separator"/>
+    <addaction name="ac_MH_Belasco"/>
+    <addaction name="separator"/>
+    <addaction name="ac_MH_ChuyenVi"/>
+    <addaction name="separator"/>
+    <addaction name="ac_MH_Vigenere"/>
+    <addaction name="separator"/>
+    <addaction name="menuRSA"/>
+   </widget>
+   <widget class="QMenu" name="menuGi_i_M">
+    <property name="title">
+     <string>Giải Mã</string>
+    </property>
+    <widget class="QMenu" name="menuRSA_2">
+     <property name="title">
+      <string>RSA</string>
+     </property>
+     <addaction name="ac_GM_TaoKhoa"/>
+     <addaction name="separator"/>
+     <addaction name="ac_GM_RSA_2"/>
+    </widget>
+    <addaction name="ac_GM_SDES"/>
+    <addaction name="separator"/>
+    <addaction name="ac_GM_Belasco"/>
+    <addaction name="separator"/>
+    <addaction name="ac_GM_ChuyenVi"/>
+    <addaction name="separator"/>
+    <addaction name="ac_GM_Vigenre"/>
+    <addaction name="separator"/>
+    <addaction name="menuRSA_2"/>
+   </widget>
+   <addaction name="menuM_H_a"/>
+   <addaction name="menuGi_i_M"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="ac_MH_RSA">
+   <property name="text">
+    <string>RSA</string>
+   </property>
+  </action>
+  <action name="ac_MH_SDES">
+   <property name="text">
+    <string>SDES</string>
+   </property>
+  </action>
+  <action name="ac_MH_Belasco">
+   <property name="text">
+    <string>Belasco</string>
+   </property>
+  </action>
+  <action name="ac_MH_ChuyenVi">
+   <property name="text">
+    <string>Chuyển vị</string>
+   </property>
+  </action>
+  <action name="ac_GM_RSA">
+   <property name="text">
+    <string>RSA</string>
+   </property>
+  </action>
+  <action name="ac_GM_SDES">
+   <property name="text">
+    <string>SDES</string>
+   </property>
+  </action>
+  <action name="ac_GM_Belasco">
+   <property name="text">
+    <string>Belasco</string>
+   </property>
+  </action>
+  <action name="ac_GM_ChuyenVi">
+   <property name="text">
+    <string>Chuyển vị</string>
+   </property>
+  </action>
+  <action name="ac_MH_Vigenere">
+   <property name="text">
+    <string>Vigenere</string>
+   </property>
+  </action>
+  <action name="ac_GM_Vigenre">
+   <property name="text">
+    <string>Vigenere</string>
+   </property>
+  </action>
+  <action name="ac_MH_TaoKhoa">
+   <property name="text">
+    <string>Tạo khóa</string>
+   </property>
+  </action>
+  <action name="ac_MH_RSA_2">
+   <property name="text">
+    <string>Mã hóa</string>
+   </property>
+  </action>
+  <action name="ac_GM_TaoKhoa">
+   <property name="text">
+    <string>Tạo Khóa</string>
+   </property>
+  </action>
+  <action name="ac_GM_RSA_2">
+   <property name="text">
+    <string>Giải Mã</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
